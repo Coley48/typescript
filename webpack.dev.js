@@ -5,7 +5,7 @@ module.exports = {
     mode: 'development',
     target: 'web', // 默认
     entry: {
-        main: './src/index.ts'
+        main: './src/test.ts'
     },
     devtool: 'inline-source-map',
     resolve: {

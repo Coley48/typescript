@@ -1,0 +1,42 @@
+{
+  "name": "render-3d",
+  "version": "1.0.0",
+  "description": "This is a TS project which based on Three.js. This project can be using in both web side and node side",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --progress --config webpack.prod.js",
+    "serve": "webpack serve --progress --config webpack.dev.js",
+    "compile": "rimraf lib && tsc"
+  },
+  "keywords": [
+    "typescript",
+    "threejs"
+  ],
+  "author": "Coley48",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@types/node": "^17.0.16",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^5.2.6",
+    "dts-bundle-webpack": "^1.0.2",
+    "html-webpack-plugin": "^5.3.1",
+    "style-loader": "^2.0.0",
+    "ts-loader": "^9.2.2",
+    "typescript": "^4.5.5",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  },
+  "dependencies": {
+    "@types/three": "^0.129.0",
+    "three": "^0.129.0"
+  }
+}

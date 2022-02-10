@@ -1,44 +1,49 @@
-const path = require("path");
-const htmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const htmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode: "development",
-    target: "web", // 默认
+    mode: 'development',
+    target: 'web', // 默认
     entry: {
-        main: "./src/index.ts",
+        main: './src/index.ts'
     },
-    devtool: "inline-source-map",
+    devtool: 'inline-source-map',
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
         alias: {
-            "@": "/src"
+            '@': '/src'
         }
     },
     module: {
-        rules: [{
-            test: /\.tsx?$/,
-            use: "ts-loader",
-            exclude: /node_modules/
-        }, {
-            test: /\.css$/i,
-            use: ["style-loader", "css-loader"]
-        }, {
-            test: /\.(png|svg|jpg|jpeg|gif)$/i,
-            type: 'asset/resource',
-        }, {
-            test: /\.(fbx|stl)$/i,
-            type: 'asset/resource',
-        }]
+        rules: [
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/
+            },
+            {
+                test: /\.css$/i,
+                use: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource'
+            },
+            {
+                test: /\.(fbx|stl)$/i,
+                type: 'asset/resource'
+            }
+        ]
     },
     plugins: [
         new htmlWebpackPlugin({
-            template: "./src/assets/html/index.html",
+            template: './src/assets/index.html'
         })
     ],
     devServer: {
         compress: true,
         port: 8000,
         open: true,
-        hot: true,
-    },
-}
+        hot: true
+    }
+};

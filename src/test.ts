@@ -1,5 +1,5 @@
 import { Renderer } from './index';
 
-let mRenderer = new Renderer();
+let mRenderer = new Renderer(document.body, { name: 'Hush' });
 
-console.log(mRenderer);
+console.log('mRenderer', mRenderer);

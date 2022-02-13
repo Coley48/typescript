@@ -27,6 +27,21 @@ npm install --save-dev eslint @typescript-eslint/parser @typescript-eslint/eslin
 npm install --save-dev style-loader css-loader ts-loader babel-loader html-webpack-plugin
 ```
 
+### 项目引用
+
+```html
+<script src="./dist/renderer.min.js"></script>
+<script>
+    new renderer.Renderer();
+</script>
+```
+
+```ts
+import { Renderer } from '../dist/renderer.min';
+
+let r = new Renderer();
+```
+
 ### TS 笔记
 
 TypeScript 是添加了类型系统的 JavaScript，适用于任何规模的项目。

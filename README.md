@@ -47,13 +47,9 @@ let r = new Renderer();
 TypeScript 是添加了类型系统的 JavaScript，适用于任何规模的项目。
 TypeScript 是一门静态类型、弱类型的语言。
 
-npm install typescript
-
 TypeScript 编译的时候即使报错了，还是会生成编译结果。
 如果要在报错的时候终止 js 文件的生成，可以在 tsconfig.json 中配置 noEmitOnError 即可。
 [tsconfig.json](https://zhongsp.gitbooks.io/typescript-handbook/content/doc/handbook/tsconfig.json.html)
-
-#### 基础
 
 使用构造函数 Boolean 创造的对象不是布尔值，事实上 new Boolean() 返回的是一个 Boolean 对象：
 
